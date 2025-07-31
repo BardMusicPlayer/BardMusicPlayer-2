@@ -39,6 +39,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\kofi.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\kofi.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="6.0.0" PrivateAssets="all" />
     <PackageReference Include="Fody" Version="6.9.2" PrivateAssets="all" />
     <PackageReference Include="HtmlAgilityPack" Version="1.12.0" />

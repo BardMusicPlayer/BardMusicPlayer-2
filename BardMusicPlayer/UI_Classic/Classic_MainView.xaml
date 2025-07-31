@@ -581,7 +581,13 @@
                        HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center"
                        VerticalContentAlignment="Center" />
             </Grid>
-
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Button Click="Donation_Click" Height="25" HorizontalAlignment="Left" Width="72" Padding="0" Margin="20,0,20,0">
+                    <StackPanel>
+                        <Image Source="/Resources/kofi.png" />
+                    </StackPanel>
+                </Button>
+            </Grid>
             <!-- Play Control Row -->
             <Grid Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0">
                 <Grid.ColumnDefinitions>

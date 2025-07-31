@@ -3,9 +3,6 @@
  * Licensed under the GPL v3 license. See https://github.com/GiR-Zippo/LightAmp/blob/main/LICENSE for full license information.
  */
 
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
 using BardMusicPlayer.Coffer;
 using BardMusicPlayer.Functions;
 using BardMusicPlayer.Maestro.Old;
@@ -16,6 +13,10 @@ using BardMusicPlayer.Seer;
 using BardMusicPlayer.Seer.Events;
 using BardMusicPlayer.Siren;
 using BardMusicPlayer.Transmogrify.Song;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace BardMusicPlayer.UI_Classic;
 
@@ -562,5 +563,14 @@ public partial class ClassicMainView
                 }
             ));
         }
+    }
+
+    private void Donation_Click(object sender, RoutedEventArgs e)
+    {
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "https://ko-fi.com/bardmusicplayers",
+            UseShellExecute = true
+        });
     }
 }
