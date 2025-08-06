@@ -106,7 +106,7 @@ jobs:
           Remove-Item -Recurse -Force .\BardMusicPlayer/bin/Release/net481/Melanchall_DryWetMidi_Native32.dll
           Remove-Item -Recurse -Force .\BardMusicPlayer/bin/Release/net481/Melanchall_DryWetMidi_Native64.dylib
           Remove-Item -Recurse -Force .\BardMusicPlayer/bin/Release/net481/BardMusicPlayer.exe.config
-          Compress-Archive -Path .\BardMusicPlayer/bin/Release/net481/* -DestinationPath .\BardMusicPlayer/bin/Release/net481/BardMusicPlayer-${{steps.get-version.outputs.file-version}}.zip
+          Compress-Archive -Path .\BardMusicPlayer/bin/Release/net481/* -DestinationPath .\BardMusicPlayer/bin/Release/net481/BardMusicPlayer.zip
 
       - name: Update Repo
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -133,7 +133,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{steps.create-new-release.outputs.upload_url }}
-          asset_path: ./BardMusicPlayer/bin/Release/net481/BardMusicPlayer-${{steps.get-version.outputs.file-version}}.zip
-          asset_name: BardMusicPlayer-${{steps.get-version.outputs.file-version}}.zip
+          asset_path: ./BardMusicPlayer/bin/Release/net481/BardMusicPlayer.zip
+          asset_name: BardMusicPlayer.zip
           asset_content_type: application/zip
           
