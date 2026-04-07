@@ -73,9 +73,8 @@
         "ASMSignature": true,
         "Key": "CHATINPUT",
         "PointerPath": [
-            0,
-            0,
-            56
+          0,
+          0
 ],
         "Value": "33 D2 E8 ?? ?? ?? ?? 48 8B 0D ?? ?? ?? ?? 48 85"
     },

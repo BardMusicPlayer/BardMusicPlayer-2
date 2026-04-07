@@ -9,5 +9,6 @@ public enum GameRegion
 {
     Global,
     China,
-    Korea
+    Korea,
+    ChinaTwo
 }

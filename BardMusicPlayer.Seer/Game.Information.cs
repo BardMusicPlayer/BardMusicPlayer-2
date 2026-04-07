@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright(c) 2025 GiR-Zippo, 2021 MoogleTroupe, trotlinebeercan
+ * Copyright(c) 2026 GiR-Zippo, 2021 MoogleTroupe, trotlinebeercan
  * Licensed under the GPL v3 license. See https://github.com/GiR-Zippo/LightAmp/blob/main/LICENSE for full license information.
  */
 
@@ -276,8 +276,10 @@ namespace BardMusicPlayer.Seer
 
                 if (File.Exists(GamePath + @"boot\locales\ko.pak"))
                     gameRegion = GameRegion.Korea;
-                else if (Directory.Exists(GamePath + @"sdo")) gameRegion = GameRegion.China;
-
+                else if (Directory.Exists(GamePath + @"sdo")) 
+                    gameRegion = GameRegion.China;
+                else if (File.Exists(GamePath + @"boot\FfxivUpdaterTC.exe"))
+                    gameRegion = GameRegion.ChinaTwo;
                 return gameRegion;
             }
             catch (Exception ex)

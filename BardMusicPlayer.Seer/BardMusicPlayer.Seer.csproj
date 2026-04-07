@@ -33,7 +33,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="WindowsFirewallHelper" Version="2.2.0.86" />
   </ItemGroup>
 
@@ -53,15 +53,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-      <ContentWithTargetPath Include="Lib\Machina\\deucalion-1.1.0.dll">
+      <ContentWithTargetPath Include="Lib\Machina\\deucalion-1.2.1.dll">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          <TargetPath>deucalion-1.1.0.dll</TargetPath>
+          <TargetPath>deucalion-1.2.1.dll</TargetPath>
       </ContentWithTargetPath>
   </ItemGroup>
   <ItemGroup>
-    <ContentWithTargetPath Include="Lib\Machina\\deucalion-1.2.0.dll">
+    <ContentWithTargetPath Include="Lib\Machina\\deucalion-1.5.0.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>deucalion-1.2.0.dll</TargetPath>
+      <TargetPath>deucalion-1.5.0.dll</TargetPath>
     </ContentWithTargetPath>
   </ItemGroup>
   <ItemGroup>
@@ -96,10 +96,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Lib\Machina\deucalion-1.1.0.dll">
+    <None Update="Lib\Machina\deucalion-1.2.1.dll">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="Lib\Machina\deucalion-1.2.0.dll">
+    <None Update="Lib\Machina\deucalion-1.5.0.dll">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Lib\Machina\oo2net_9_win64.dll">
