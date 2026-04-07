@@ -46,11 +46,13 @@ public partial class App
         BmpScript.Instance.Start();
 
         BmpSiren.Instance.Setup();
+        XIVMIDI.XIVMIDI.Instance.Start();
     }
 
     protected override void OnExit(ExitEventArgs e)
     {
         //LogManager.Shutdown();
+        XIVMIDI.XIVMIDI.Instance.Stop();
         if (BmpSiren.Instance.IsReadyForPlayback)
             BmpSiren.Instance.Stop();
         BmpSiren.Instance.ShutDown();

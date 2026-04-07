@@ -11,7 +11,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="15" />
             <RowDefinition Height="32" />
-            <RowDefinition Height="32" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
             <RowDefinition Height="*" />
             <RowDefinition Height="170" />
         </Grid.RowDefinitions>
@@ -19,10 +20,19 @@
         <ProgressBar Grid.Row="0" x:Name="LoadingProgressBar" IsIndeterminate="True" />
 
         <Button Grid.Row="1" x:Name="BtnGetSongList" Content="Load MIDI Repository" Click="Button_Click" />
-
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Performers:"/>
+            <ComboBox x:Name="PerformerSize_box" Grid.Column="1" Margin="-5,0 5,0" Padding="5" Text="Perfomer size" SelectionChanged="PerformerSize_box_SelectionChanged" VerticalAlignment="Center" SelectedIndex="1"></ComboBox>
+            <!-- <Button x:Name="RefreshButton" Grid.Column="2" Content="⟳" Click="Button_Click" Height="18"/> -->
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="80" />
             </Grid.ColumnDefinitions>
@@ -32,7 +42,7 @@
             <TextBlock x:Name="ResultsCountTextBox" Grid.Column="2" Text="0 Results" HorizontalAlignment="Right"
                        Margin="0,0,0,0" Padding="5" />
         </Grid>
-        <Grid Grid.Row="3" Background="{DynamicResource MaterialDesignBackground}">
+        <Grid Grid.Row="4" Background="{DynamicResource MaterialDesignBackground}">
             <ListView Margin="0,0,0,0"
                       x:Name="MidiRepoContainer"
                       VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0"
@@ -42,7 +52,7 @@
                       MouseDoubleClick="MidiRepoContainer_MouseDoubleClick"
                       materialDesign:RippleAssist.IsDisabled="True" />
         </Grid>
-        <Grid Grid.Row="4" x:Name="DownloadPanel" Background="{DynamicResource MaterialDesignPaper}">
+        <Grid Grid.Row="5" x:Name="DownloadPanel" Background="{DynamicResource MaterialDesignPaper}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2" />
                 <RowDefinition Height="24" />
