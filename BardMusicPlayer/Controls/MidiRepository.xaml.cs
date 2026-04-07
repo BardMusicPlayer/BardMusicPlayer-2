@@ -108,6 +108,13 @@ public partial class MidiRepository
             _previewListSong.Clear();
 
             var data = e as XIVMIDI.IO.BMPResponseContainer.Root;
+            if (data == null)
+            {
+                List<string> filteredList = new List<string>();
+                filteredList.Add("No data loaded!");
+                MidiRepoContainer.ItemsSource = filteredList;
+                return;
+            }
             foreach (var file in data.docs)
             {
                 try
@@ -141,6 +148,8 @@ public partial class MidiRepository
             this.Dispatcher.BeginInvoke(new Action(() =>
             {
                 var data = e as XIVMIDI.IO.XIVMIDIResponseContainer.MidiFile;
+                if (data == null)
+                    return;
                 var downloadsPath = BmpPigeonhole.Instance.MidiDownloadPath;
                 var finalFilePath = $"{downloadsPath}/{data.Filename}.mid";
 
